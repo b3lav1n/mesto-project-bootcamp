@@ -11,7 +11,7 @@
   <header class="header">
     <img src="./images/Vector.svg" alt="логотип Mesto" class="header__logo">
   </header>
-  <main class="main">
+  <main>
     <section class="profile">
       <img src="./images/image.jpg" alt="человек в шапке" class="profile__avatar">
       <div class="profile__info">
@@ -67,9 +67,20 @@
           </li>
       </ul>
     </section>
-    <footer class="footer">
-      <p class="footer__copyright">© 2020 Mesto Russia</p>
-    </footer>
   </main>
+  <footer class="footer">
+    <p class="footer__copyright">© 2020 Mesto Russia</p>
+  </footer>
+< <div class="popup">
+    <div class="popup__container">
+      <button class="popup__close-icon"></button>
+      <h2 class="popup__title">Редактировать профиль</h2>
+      <form class="popup__form">
+        <input type="text" name="username" placeholder="Имя" class="popup__input">
+        <input type="text" name="jobtitle" placeholder="Должность" class="popup__input">
+        <button class="popup__button">Сохранить</button>
+      </form>
+    </div>
+  </div>
 </body>
 </html>
