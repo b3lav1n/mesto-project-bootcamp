@@ -1,7 +1,7 @@
 .profile__add-button {
   width: 150px;
   min-height: 50px;
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   background-color: black;
   box-sizing: border-box;
   align-self: center;
@@ -30,5 +30,6 @@
   .profile__add-button {
     margin: 36px 0 0;
     width: 282px;
+    background-size: 16px 16px;
   }
 }
