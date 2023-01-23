@@ -1,15 +1,16 @@
 .profile__info {
+  margin: 0 auto 0 0;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  max-width: 336px;
-  margin: 0 auto 0 30px;  
-  padding: 0;
   align-items: center;
+  flex-wrap: wrap;
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-style: normal;
+  max-width: calc(100% - 300px);
 }
 
 @media screen and (max-width: 656px) {
   .profile__info {
-    margin: 0 auto 0;
+    margin: 0 auto;
+    max-width: 100%;
   }
 }
