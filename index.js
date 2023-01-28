@@ -22,11 +22,6 @@ const deleteButton = templateCard.querySelector('.element__button-trash');
 const editProfile = document.querySelector('#edit__profile');
 const addCard = document.querySelector('#create__card');
 
-
-
-console.log(deleteButton)
-
-
 // открытие/закрытие попапа для редактирования профиля 
 
 buttonEdit.addEventListener('click', function () {
@@ -80,15 +75,6 @@ let initialCards = [
   }
 ];
 
-/*const placeInfo = initialCards.map(function (item) {
-  return {
-    name: item.name,  
-    link: item.link
-  };
-});*/
-
-
-
 function renderCard({ name, link }) {
 
   deleteButton.addEventListener('click', function() {
@@ -102,26 +88,20 @@ function renderCard({ name, link }) {
 
   cardElement.querySelector('.element__button-like').addEventListener('click', function(evt) {
     evt.target.classList.toggle('element__button-like_active')
-
-    console.log(evt)
   });
 
   cardElement.querySelector('.element__button-trash').addEventListener('click', function() {
-  const localName = cardElement.querySelector('.element__title').textContent
-  initialCards = initialCards.filter(function (item) {
-    return item.name !== localName
+    const localName = cardElement.querySelector('.element__title').textContent
+    initialCards = initialCards.filter(function (item) {
+      return item.name !== localName
+    })
+
+    cards.querySelectorAll('.element').forEach(function (item) {
+      cards.removeChild(item);
+    })
+
+    render();
   })
-
-  cards.querySelectorAll('.element').forEach(function (item) {
-    cards.removeChild(item);
-  })
-
-  render();
-
-  console.log(initialCards);
-  })
-
-  
 
   cards.prepend(cardElement);
 }
@@ -160,32 +140,13 @@ function createCard (evt) {
   })
 
   render();
-
-  console.log(initialCards)
-  /*
-  const cardElement = templateCard.querySelector(".element").cloneNode(true);
-  cardElement.querySelector(".element__title").textContent = nameValue;
-  cardElement.querySelector(".element__image").src = linkValue;
-
-  cardElement.querySelector('.element__button-like').addEventListener('click', function(evt) {
-    evt.target.classList.toggle('element__button-like_active')
-  });
-  
-  
-  cards.prepend(cardElement);
-  */
   
   popupAddCards.classList.remove('popup_opened');
 }
 
 addCard.addEventListener('submit', createCard);
 
-// удаление карточки
 
-deleteButton.addEventListener('click', function() {
-  const listItem = deleteButton.
-  listItem.remove();
-});
 
 
 
