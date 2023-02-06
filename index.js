@@ -13,14 +13,15 @@ const templateCard = document.querySelector("#template-cards").content;
 const buttonAddCards = document.querySelector('.profile__add-button');
 const popupAddCards = document.querySelector('.popup_card-add');
 const popupCloseCards = document.querySelector('.popup_card-close');
-const linkInput = document.querySelector('.linkInput');
-const nameCardInput = document.querySelector('.nameCardInput');
+const linkInput = document.querySelector('.link__input');
+const nameCardInput = document.querySelector('.name__card-input');
 const buttonCreate = document.querySelector('.popup__button-create');
 const likeButtonInactive = templateCard.querySelector('.element__button-like');
 const likeButtonActive = templateCard.querySelector('.element__button-like_active');
 const deleteButton = templateCard.querySelector('.element__button-trash');
 const editProfile = document.querySelector('#edit__profile');
 const addCard = document.querySelector('#create__card');
+
 
 // открытие/закрытие попапа для редактирования профиля 
 
@@ -146,11 +147,12 @@ function createCard (evt) {
 
 addCard.addEventListener('submit', createCard);
 
+// открытие/закрытие попапа с карточкой
 
+const popupImage = document.querySelector('.popup_image-zoom'); 
+const elementImage = document.querySelector('.popup__image');
+const elementCaption = document.querySelector('.popup__caption');
 
+initialCards.forEach(function () {
 
-
-
-
-
-
+})
