@@ -21,6 +21,12 @@ const likeButtonActive = templateCard.querySelector('.element__button-like_activ
 const deleteButton = templateCard.querySelector('.element__button-trash');
 const editProfile = document.querySelector('#edit__profile');
 const addCard = document.querySelector('#create__card');
+const elementElements = document.querySelector('.element__elements')
+const popupImage = document.querySelector('.popup_image-zoom');                           // Найти popup открытия просмотра увеличенного изображения
+const elementImage = document.querySelector('.popup__image');                               // Найти изображение
+const elementTitle = document.querySelector('.popup__caption');  
+
+
 
 
 // открытие/закрытие попапа для редактирования профиля 
@@ -101,7 +107,18 @@ function renderCard({ name, link }) {
       cards.removeChild(item);
     })
 
+    // открытие модального окна p.s пока в функцию не возводил
+    initialCards.forEach(function(item) {
+      cardElement.addEventListener('click', function() {
+        popupImage.classList.add('popup_opened');
+    
+        elementImage.src = item.link;
+        elementTitle.textContent = item.name;
+      })
+    })
+
     render();
+
   })
 
   cards.prepend(cardElement);
@@ -147,12 +164,7 @@ function createCard (evt) {
 
 addCard.addEventListener('submit', createCard);
 
-// открытие/закрытие попапа с карточкой
 
-const popupImage = document.querySelector('.popup_image-zoom'); 
-const elementImage = document.querySelector('.popup__image');
-const elementCaption = document.querySelector('.popup__caption');
 
-initialCards.forEach(function () {
 
-})
+
